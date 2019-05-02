@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+        android:id="@+id/detail_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/img_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="visible"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            //点赞飘心的容器
+            <com.anenn.flowlikeviewlib.FlowLikeView
+                android:id="@+id/flowLikeView"
+                android:layout_width="50dp"
+                android:layout_height="210dp"
+                android:layout_alignParentTop="true"
+                >
+
+
+
+            </com.anenn.flowlikeviewlib.FlowLikeView>
+
+            <ImageView
+                android:layout_below="@+id/flowLikeView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_launcher"
+            />
+
+            //隐藏 不适用
+           <!-- <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_big_red"
+                android:src="@mipmap/add_icon"
+                android:tint="@android:color/white"
+                android:scaleType="centerInside"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                />-->
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_xin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:drawableTop="@mipmap/heart_icon"
+            android:layout_marginTop="16dp"
+            android:text="88.8w"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:drawableTop="@mipmap/msg_icon"
+            android:layout_marginTop="16dp"
+            android:text="66.8w"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:drawableTop="@mipmap/share_icon"
+            android:layout_marginTop="16dp"
+            android:text="99.8w"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_play"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/ic_live_profile_paly"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="#f2f2f2"
+        android:alpha="0"
+        android:layout_centerInParent="true"
+        />
+
+
+</RelativeLayout>
